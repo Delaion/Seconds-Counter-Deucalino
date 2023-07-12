@@ -1,13 +1,12 @@
 import react from "react";
 import reactDom from "react-dom";
 import Home from "./home.jsx";
-var window.onload= function(){
+
     let number=1
     let counter=setInterval(function(){
         number=number+1;
     }, 1000); |
-    console.log(number);|
-    };
+    console.log(number);
 const SecondsCounter =()=>{
     return (
         <div id="My_Seconds_Counter">
