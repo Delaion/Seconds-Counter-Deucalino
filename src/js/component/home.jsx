@@ -1,8 +1,6 @@
 import React from "react";
-import reactDom from "react-dom";
+import ReactDom from "react-dom";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 import SecondsCounter from "./SecondsCounter.jsx";
 
 //create your first component
@@ -11,6 +9,6 @@ const Home = () => {
 		<SecondsCounter/>
 	);
 };
-reactDom.render(<SecondsCounter/>, document.getElementById('root'))
+ReactDOM.render(<Home/>), document.querySelector("#app");
 
 export default Home;
