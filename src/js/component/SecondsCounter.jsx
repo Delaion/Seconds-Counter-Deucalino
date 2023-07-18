@@ -5,19 +5,27 @@ import Home from "./home.jsx";
     let number=1
     let counter=setInterval(function(){
         number=number+1;
+        ReactDOM.render(
+            <SecondsCounter 
+            digitZero
+            number={counter} />,
+            document.querySelector('#app'))
     }, 1000); 
-    console.log(number);
-const SecondsCounter =()=>{
+    counter.propTypes= {
+        digitZero: propTypes.number,
+        digitOne: propTypes.number,
+
+    };
+ 
+function SecondsCounter (props) {
     return (
         <div id="My_Seconds_Counter">
             <div className="containerNumbers bg-dark">
-            <i className="fa-regular fa-clock-twelve"></i>
-            <p className="bg-dark-subtle">0</p>
-            <p className="bg-dark-subtle">0</p>
-            <p className="bg-dark-subtle">0</p>
-            <p className="bg-dark-subtle">0</p>
-            <p className="bg-dark-subtle" id="starter">{counter}</p>
-
+                <div className="clock-bg-dark-subtle"> <i className="fa-regular fa-clock-twelve"></i></div>
+                <div className="zero-bg-dark-subtle">{props.digitZero}</div>
+                <div className="zero-bg-dark-subtle">{props.digitZero}</div>
+                <div className="zero-bg-dark-subtle">{props.digitZero}</div>
+                <div className="counter-bg-dark-subtle">{counter}</div>
             </div>
         </div>
     );
