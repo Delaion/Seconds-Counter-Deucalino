@@ -9,6 +9,6 @@ const Home = () => {
 		<SecondsCounter/>
 	);
 };
-ReactDOM.render(<Home/>), document.querySelector("#app");
+ReactDOM.render(<SecondsCounter/>), document.querySelector("#app");
 
 export default Home;
